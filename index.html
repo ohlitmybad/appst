@@ -1435,7 +1435,7 @@ const colorClasses = ['result-color-blue', 'result-color-pink', 'result-color-or
 
 
     function removeSpecialChars(str) {
-      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return str.normalize("NFD").replace(/[\u0300-\u036f\s]/g, "");
     }
 
     function search(query) {
