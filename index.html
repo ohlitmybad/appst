@@ -752,8 +752,9 @@ const searchButton = document.getElementById("searchButton");
 function updateMatchingNames() {
   const searchQuery = removeSpecialChars(searchInput.value.toLowerCase());
   const matchingNames = names.filter(function(name) {
-    const normalizedName = removeSpecialChars(name.toLowerCase());
-    return normalizedName.includes(searchQuery);
+  const [fullName] = name.split(",");
+    const normalizedName = removeSpecialChars(fullName.toLowerCase());
+	  return normalizedName.includes(searchQuery);
   });
 
   matchingNamesContainer.innerHTML = "";
