@@ -21,7 +21,7 @@
 
         iframe {
             width: 100%;
-            height: 522px;
+            height: 530px;
             border: none; /* Remove iframe borders if desired */
         }
 
@@ -81,6 +81,24 @@ function generateSrc(_0x453324){var _0x4b826e=atob(_0x453324);return _0x4b826e;}
 
 
 
+
+<script>
+    // Function to scroll down a tiny bit
+    function scrollDown() {
+        window.scrollBy(0, 100); // Adjust the value (100) to change the scroll distance
+    }
+
+    // Function to scroll up a tiny bit
+    function scrollUp() {
+        window.scrollBy(0, -80); // Adjust the value (-80) to change the scroll distance
+    }
+
+    // Combine both actions with a small timer between them
+    window.onload = function() {
+        scrollDown();
+        setTimeout(scrollUp, 100); // Adjust the delay time (1000ms = 1 second)
+    };
+</script>
 
 
 
