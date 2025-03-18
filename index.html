@@ -878,50 +878,44 @@ svg.radar > g {
   const chartContainer = document.querySelector('.screenshotcontainer');
   const isDarkMode = document.body.classList.contains('dark-mode');
   
-  html2canvas(chartContainer, {
-    scale: 2,
-    backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
-    allowTaint: true,
-    useCORS: true,
-    logging: false,
-    foreignObjectRendering: false,
-    imageTimeout: 0,
-    onclone: function(clonedDoc) {
-      // Hide similar players table
-      const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
-      if (similarPlayersContainer) {
-        similarPlayersContainer.style.display = 'none';
-      }
-      
-      // Hide everything above results table
-      const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
-      const searchContainer = clonedDoc.querySelector('.search-container');
-      if (positionSwitcher) positionSwitcher.style.display = 'none';
-      if (searchContainer) searchContainer.style.display = 'none';
-      
-      // Fix SVG positioning
-      const radarSVG = clonedDoc.querySelector('.radar');
+  try {
+    const canvas = await html2canvas(chartContainer, {
+      backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
+      useCORS: true,
+      logging: false,
+      foreignObjectRendering: false,
+      onclone: function(clonedDoc) {
+        const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
+        if (similarPlayersContainer) {
+          similarPlayersContainer.style.display = 'none';
+        }
+        
+        const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
+        const searchContainer = clonedDoc.querySelector('.search-container');
+        if (positionSwitcher) positionSwitcher.style.display = 'none';
+        if (searchContainer) searchContainer.style.display = 'none';
+
+        const radarSVG = clonedDoc.querySelector('.radar');
       if (radarSVG) {
         radarSVG.style.display = 'block';
         radarSVG.style.margin = '0 auto';
-        
-        // Ensure transform is properly applied to SVG's inner group
         const svgGroup = radarSVG.querySelector('g');
         if (svgGroup) {
           svgGroup.setAttribute('transform', 'translate(195.5, 195.5)');
         }
       }
-    }
-  }).then(canvas => {
+      }
+    });
+    
     canvas.toBlob(blob => {
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
       link.download = 'DataMB Screenshot.png';
-      document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
     }, 'image/png');
-  });
+    
+  } catch (error) {
+  }
 }
 
   // Function to toggle dark mode
