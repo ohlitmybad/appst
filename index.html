@@ -913,12 +913,14 @@ svg.radar > g {
       }
     }
   }).then(canvas => {
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
-    link.download = 'DataMB Screenshot.png';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    canvas.toBlob(blob => {
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'DataMB Screenshot.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 'image/png');
   });
 }
 
