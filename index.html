@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -29,6 +29,49 @@
 </script>
 <defs>
 <style>
+
+:root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #f5f7fa;
+        --container-bg: #ffffff;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --hover-color: #f0f0f0;
+        --button-color: #3498db;
+        --button-text: #ffffff;
+        --header-bg: #ffffff;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        --table-bg: #f2f2f2;
+    }
+
+    .dark-mode {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #0e0f0f;
+        --container-bg: #1a1a1a;
+        --text-color: #e0e0e0;
+        --border-color: #333333;
+        --hover-color: #252525;
+        --button-color: #2980b9;
+        --button-text: #ffffff;
+        --header-bg: #0e0f0f;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        --table-bg: #333333;
+    }
+
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        width: 470px;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+    }
 
 #matchingNames {
   background-color: #ffffff;
@@ -84,433 +127,269 @@ body.dark-mode #matchingNames .name:hover {
 .team {
   color: #777777;
 }
+	
 
 
-
-.result-color-blue {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-pink {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-orange {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-green {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-
-
-
-.result-color-bleu {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-rose {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-
-
+/* Color classes for radar chart */
 .result-color-1 {
   color: #3062FB !important;
   stroke: #3062FB;
   fill: #3062FB;
-  fill-opacity: 0.02;
+  fill-opacity: 0;
 }
-
-
 .result-color-2 {
   color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  stroke: #F62681;
+  fill: #F62681;
+  fill-opacity: 0;
 }
-
 .result-color-3 {
   color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  stroke: #55d149;
+  fill: #55d149;
+  fill-opacity: 0;
 }
-
 .result-color-4 {
   color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  stroke: #FFCF5F;
+  fill: #FFCF5F;
+  fill-opacity: 0;
 }
-
-
 .result-color-5 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(153, 50, 204) !important;
+  stroke: rgb(153, 50, 204);
+  fill: rgb(153, 50, 204);
+  fill-opacity: 0;
 }
-
-
 .result-color-6 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
+  color: rgb(255, 140, 0) !important;
+  stroke: rgb(255, 140, 0);
+  fill: rgb(255, 140, 0);
+  fill-opacity: 0;
+}
 
-}
 .result-color-7 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(30, 144, 255) !important;
+  stroke: rgb(30, 144, 255);
+  fill: rgb(30, 144, 255);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-8 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(240, 128, 128) !important;
+  stroke: rgb(240, 128, 128);
+  fill: rgb(240, 128, 128);
+  fill-opacity: 0;
 }
 
+
+
+
 .result-color-9 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+    color: rgb(144, 238, 144) !important;
+    stroke: rgb(144, 238, 144);
+    fill: rgb(144, 238, 144);
+    fill-opacity: 0;
 }
 
 .result-color-10 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(135, 206, 235) !important;
+  stroke: rgb(135, 206, 235);
+  fill: rgb(135, 206, 235);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-11 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(246, 38, 129) !important;
+  stroke: rgb(246, 38, 129);
+  fill: rgb(246, 38, 129);
+  fill-opacity: 0;
 }
-
 
 .result-color-12 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 69, 0) !important;
+  stroke: rgb(255, 69, 0);
+  fill: rgb(255, 69, 0);
+  fill-opacity: 0;
 }
-
 
 .result-color-13 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(60, 179, 113) !important;
+  stroke: rgb(60, 179, 113);
+  fill: rgb(60, 179, 113);
+  fill-opacity: 0;
 }
 
-
 .result-color-14 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(138, 40, 165) !important;
+  stroke: rgb(138, 40, 165);
+  fill: rgb(138, 40, 165);
+  fill-opacity: 0;
 }
 
 .result-color-15 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(70, 130, 180) !important;
+  stroke: rgb(70, 130, 180);
+  fill: rgb(70, 130, 180);
+  fill-opacity: 0;
 }
 
 .result-color-16 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(208, 32, 144) !important;
+  stroke: rgb(208, 32, 144);
+  fill: rgb(208, 32, 144);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-17 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(220, 20, 60) !important;
+  stroke: rgb(220, 20, 60);
+  fill: rgb(220, 20, 60);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-18 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 223, 60) !important;
+  stroke: rgb(255, 223, 60);
+  fill: rgb(255, 223, 60);
+  fill-opacity: 0;
 }
+
+
 .result-color-19 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(238, 130, 238) !important;
+  stroke: rgb(238, 130, 238);
+  fill: rgb(238, 130, 238);
+  fill-opacity: 0;
 }
-
 
 .result-color-20 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(147, 112, 219) !important;
+  stroke: rgb(147, 112, 219);
+  fill: rgb(147, 112, 219);
+  fill-opacity: 0;
 }
 
+
+
 .result-color-21 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(34, 139, 34) !important;
+  stroke: rgb(34, 139, 34);
+  fill: rgb(34, 139, 34);
+  fill-opacity: 0;
 }
 
 .result-color-22 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(255, 198, 0) !important;
+  stroke: rgb(255, 198, 0);
+  fill: rgb(255, 198, 0);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-23 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 99, 71) !important;
+  stroke: rgb(255, 99, 71);
+  fill: rgb(255, 99, 71);
+  fill-opacity: 0;
 }
-
-
 .result-color-24 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(65, 105, 225) !important;
+  stroke: rgb(65, 105, 225);
+  fill: rgb(65, 105, 225);
+  fill-opacity: 0;
 }
-
-
 .result-color-25 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 215, 0) !important;
+  stroke: rgb(255, 215, 0);
+  fill: rgb(255, 215, 0);
+  fill-opacity: 0;
 }
 
 
 .result-color-26 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(0, 206, 209) !important;
+  stroke: rgb(0, 206, 209);
+  fill: rgb(0, 206, 209);
+  fill-opacity: 0;
 }
-
 .result-color-27 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(197, 142, 255) !important;
+  stroke: rgb(197, 142, 255);
+  fill: rgb(197, 142, 255);
+  fill-opacity: 0;
 }
-
 .result-color-28 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(46, 139, 87) !important;
+  stroke: rgb(46, 139, 87);
+  fill: rgb(46, 139, 87);
+  fill-opacity: 0;
 }
-
-
 .result-color-29 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 105, 180) !important;
+  stroke: rgb(255, 105, 180);
+  fill: rgb(255, 105, 180);
+  fill-opacity: 0;
 }
-
-
 .result-color-30 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 165, 0) !important;
+  stroke: rgb(255, 165, 0);
+  fill: rgb(255, 165, 0);
+  fill-opacity: 0;
 }
 .result-color-31 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 207, 95) !important;
+  stroke: rgb(255, 207, 95);
+  fill: rgb(255, 207, 95);
+  fill-opacity: 0;
 }
-
-
 .result-color-32 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(255, 182, 193) !important;
+  stroke: rgb(255, 182, 193);
+  fill: rgb(255, 182, 193);
+  fill-opacity: 0;
 }
-
 .result-color-33 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(102, 205, 170) !important;
+  stroke: rgb(102, 205, 170);
+  fill: rgb(102, 205, 170);
+  fill-opacity: 0;
 }
-
 .result-color-34 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(48, 98, 251) !important;
+  stroke: rgb(48, 98, 251);
+  fill: rgb(48, 98, 251);
+  fill-opacity: 0;
 }
-
-
 .result-color-35 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(186, 85, 211) !important;
+  stroke: rgb(186, 85, 211);
+  fill: rgb(186, 85, 211);
+  fill-opacity: 0;
 }
-
-
 .result-color-36 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(123, 104, 238) !important;
+  stroke: rgb(123, 104, 238);
+  fill: rgb(123, 104, 238);
+  fill-opacity: 0;
 }
-
-
 .result-color-37 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-38 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-39 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-40 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-41 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-42 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-.result-color-43 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-44 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-45 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-46 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-47 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-48 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(0, 128, 128) !important;
+  stroke: rgb(0, 128, 128);
+  fill: rgb(0, 128, 128);
+  fill-opacity: 0;
 }
 
 body, html {
@@ -535,22 +414,47 @@ text {
 }
 
 
-  #searchInput1::placeholder {
-    font-size : 18px; 
-  }
-
-
 
 
 
 .x-cell {
-  position: absolute;
-left: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
 }
 
+.x-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.x-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dark-mode .x-button {
+  background-color: #333333;
+  color: #f2f2f2;
+}
+
+.dark-mode .x-button:hover {
+  background-color: #444444;
+}
 
 td {
     display: flex;
+    align-items: center;
 }
   th {
     font-weight: normal;
@@ -560,267 +464,17 @@ td {
   display: flex;
 }
 
-	
-.button-1 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 15px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-1:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-2 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none !important;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 24px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-2:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-3 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 33px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-3:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-4 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 42px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-4:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-.button-5 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 51px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-5:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-6 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 60px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-6:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-
-.maxcontainer {
-position: absolute;
-    }
-
-
-    .toggle-container2 {
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-  top: 400px;
-  left: -35.4px;
- width: 120px; 
-    }
 
     img {
-            width: 31px;
-top: -400px;
-pointer-events: none;
-z-index: 40000; 
-left: -953px;
-opacity: .8;
-        }
+    width: 38px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    opacity: 0.64;
+   }
 
 
-        .screenshotcontainer {
-            margin-left: 8px;
-        }
+ 
         
-
-.finalcontainer {
-  width: 100%; 
-}
-.emptycontainer {
-    height: 65px;
-    width: 100%;
-}
-
-
 
 
 
@@ -830,88 +484,44 @@ table {
 margin-top: 0%;
 margin-left: 0%;
   table-layout: auto;
+  margin-left:14px;
  
 }
 
 .similar-table {
-  position: absolute;
-  left: 78px;
-  width: 350px;
+  width: 300px;
   text-align: center;
-
+  margin: 0;
+  flex-grow: 1;
 }
 
-
-
-#searchInput1 {
-    width: 406px;
-    height: 32px;
-    font-size: 15px;
-    border-radius: 3px;
-    border-width: 0.5px;
-    padding: 1px;
-    padding-left: 5px; /* Adds extra padding on the left side */
-    margin-bottom: 1px;
-    margin-top: 16px;
-        }
-
-
-#searchButton1 {
-  width: 32px;
-color: black !important;
-height: 32px;
-cursor: pointer;
-margin-top: 16px;
-}
 
   
-  
-svg.radar {
-  width: 420px;
-  height: 435px;
-}
 
 
-.searchcontainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-	  margin-left: 8px;
-	
-}
 
 .dark-mode-toggle {
-position: absolute;
-top: 60px;
-    left: 426px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26.8px;
-    height: 26.8px;
-    background-color: #e0e0de;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--container-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        z-index: 100;
+        transition: background-color 0.3s;
+    }
 
-	
- .button-10 {
-    position: absolute;
-    top: 400px;
-    left: 410px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30.8px;
-    height: 30.8px;
-    border-radius: 50%;
-  background-color: #e0e0de;
-  color: #333;
-  border: 0.1px solid #ccc;
-  cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Removed old button-10 style */
+    
+    .screenshot-button:hover {
+        background-color: #2980b9;
+    }
 
 
 
@@ -957,19 +567,6 @@ body.dark-mode .dark-mode-toggle .toggle-icon::before {
   font-size: 16px; 
 }
 
-body.dark-mode #searchInput1 {
-    color: #000; 
-background-color : #cacaca;
-  }
-	
- body.dark-mode	  #searchInput1::placeholder {
-    color: #363636; 
-  }
-
- body.dark-mode	  #searchButton1 {
-    color: #fff !important; 
-background-color : #333333;
-  }
 
   body.dark-mode button {
   background-color: #333333;
@@ -984,7 +581,174 @@ body.dark-mode button:hover {
   color: initial;
 }
 
+.position-switcher-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 700px;
+    flex-wrap: wrap;
+    padding: 10px 12px;
 
+}
+
+
+.position-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    width: 40px; /* Fixed width for all position buttons */
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.position-link:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.position-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Dark mode styles for position switcher */
+.dark-mode .position-link {
+    border-color: var(--border-color);
+}
+
+.dark-mode .position-link.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive styles for position switcher */
+@media screen and (max-width: 500px) {
+    .position-switcher-container {
+        gap: 8px;
+    }
+    
+    .position-link {
+        padding: 6px 10px;
+        min-width: 36px;
+        width: 45px; /* Slightly smaller fixed width for mobile */
+        font-size: 13px;
+    }
+}
+
+
+#searchInput1 {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        background-color: var(--container-bg);
+        color: var(--text-color);
+        transition: border-color 0.2s;
+        height: 20px;
+        margin-left: 12px;
+        width: 377px;
+        max-width: 100%;
+    }
+
+    #searchInput1:focus {
+        border-color: var(--primary-color);
+    }
+
+    #searchInput1::placeholder {
+        color: #999;
+    }
+
+
+    
+    #searchButton1 {
+        background-color: var(--button-color);
+        color: var(--button-text) !important;
+        border: none;
+        border-radius: 6px;
+        height: 36px;
+        width: 36px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 18px;
+        right: 25px; /* Position from the right edge */
+        align-items: center;  /* Center vertically */
+        justify-content: center;  /* Center horizontally */
+        line-height: 1;  /* Fix line height */
+        padding: 0;  /* Remove any padding */
+    }
+
+
+    #searchButton1:hover {
+        background-color: #2980b9;
+    }
+    body.dark-mode #searchButton1:hover {
+        background-color: #2980b9;
+    }
+
+    body.dark-mode #searchButton1 {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);    }
+
+
+
+svg.radar {
+  height: 391px;
+  width: 391px;
+  display: block; /* Add display block */
+  margin: 0 auto; /* Center the radar chart */
+}
+
+/* Add specific styling for the SVG group */
+svg.radar > g {
+    transform-origin: center;
+    transform: translate(50%, 50%); /* Center the group */
+}
+
+.logo-screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-screenshot-container img {
+  width: 38px;
+  opacity: 0.64;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+.button-10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 10px;
+  position: static;
+  flex-shrink: 0;
+}
 </style>
 </defs>
 	
@@ -1008,98 +772,105 @@ body.dark-mode button:hover {
 
 
 <body>
-    <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer">
-        <button class="button-1" role="button">GK</button></a>
-      
-      <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer">
-        <button class="button-2" style="text-decoration: none;" role="button">CB</button></a>
-      
-      <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer">
-        <button class="button-3" role="button">FB</button></a>
-      
-      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer">
-        <button class="button-4" role="button">CM</button></a>
-      
-      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer">
-        <button class="button-5" role="button">FW</button></a>
-      
-      <a href="https://datamb.football/appst/" target="_top" rel="noopener noreferrer">
-        <button class="button-6" role="button">ST</button></a>
-  <div class="searchcontainer">
-    <input type="text" id="searchInput1" class="search-bar" placeholder="Enter striker name..." />
-    &nbsp;<input type="button" id="searchButton1" value="+&nbsp;" />
-    <div class="dark-mode-toggle" onclick="toggleDarkMode()"><div class="toggle-icon"></div></div></div>
-    <div class="screenshotcontainer">
+  <div class="screenshotcontainer">
+    <div class="position-switcher-container">
+      <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>GK</span>
+      </a>
+      <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CB</span>
+      </a>
+      <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FB</span>
+      </a>
+      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CM</span>
+      </a>
+      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FW</span>
+      </a>
+      <span class="position-link active" style="user-select: none;">
+        <span>ST</span>
+    </span>
+    </div>
+
+    <div class="search-container">
+      <div class="search-controls">
+        <input type="text" id="searchInput1" class="search-bar" data-i18n="search.placeholder2" placeholder="Enter striker name..." />
+        <button id="searchButton1">+</button>
+      </div>
       <div id="matchingNames"></div>
-	<div id="resultsTable"></div>  
-  <div class="maxcontainer">
-  <div class="toggle-container2">
-    <img src="https://datamb.football/logo.png" alt="Logo">
-  </div>
-  <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
 
-  </div>
+    <div id="resultsTable"></div>
+    
+    <div class="radar-container" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+      <svg class="radar">
+        <g transform="translate(0,0)"><g class="axisWrapper">
+          <g class="radar_label">
+            <text class="label" data-type="Aerial%" data-idx="0" transform="translate(-20 -172) rotate(-2)">xA</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Long%" data-idx="6" transform="matrix(0.5, -0.86, 0.86, 0.5, -176, -50) rotate(4.5)">Passes to box</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Passes" data-idx="5" transform="matrix(-0.38, -0.93, 0.93, -0.38, -162, 58) rotate(3.87)">xG</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Exits" data-idx="4" transform="translate(-88 166) rotate(20.3)">NPG</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Aerial" data-idx="3" transform="translate(65 177) rotate(-28.32)">Aerial%</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Def Actions" data-idx="2" transform="translate(178 -2.7) rotate(100.11)">Passes Rec</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Shotstopping" data-idx="1" transform="translate(107 -142) rotate(51.09)">Att Actions</text>
+        </g>
 
 
-  <svg class="radar"><g transform="translate(223,225.77)"><g class="axisWrapper">
-    <g class="radar_label">
-        <text class="label" data-type="Aerial%" data-idx="0" transform="translate(-18.60 -156.1) rotate(-2)">xA</text>
-    </g>
+<circle class="blackCircle" r="165" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
+<circle class="gridCircle" r="165" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="139" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="104" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="70" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="35" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+
+
+<line x1="0" y1="0" x2="8.11" y2="164.74" stroke="#D3D3D3" stroke-width="1" transform="translate(-8.11, -164.74)"></line>
+<line x1="0" y1="0" x2="-123.52" y2="109.77" stroke="#D3D3D3" stroke-width="1" transform="translate(123.25, -109.77)"></line>
+<line x1="0" y1="0" x2="-162.88" y2="-28.1" stroke="#D3D3D3" stroke-width="1" transform="translate(163.09, 28.04)"></line>
+<line x1="0" y1="0" x2="-79.86" y2="-145.15" stroke="#D3D3D3" stroke-width="1" transform="translate(79.86, 144.53)"></line>
+<line x1="0" y1="0" x2="63.48" y2="-152.91" stroke="#D3D3D3" stroke-width="1" transform="translate(-63.48, 152.47)"></line>
+<line x1="0" y1="0" x2="158.9" y2="-45.8" stroke="#D3D3D3" stroke-width="1" transform="translate(-158.89, 45.63)"></line>
+<line x1="0" y1="0" x2="134.5" y2="95.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-134.51, -95.67)"></line>
+
+
+<g class="radarWrapper"></g>
+</g></g>
+      </svg>
+    </div>
     
-    <g class="radar_label">
-        <text class="label" data-type="Long%" data-idx="6" transform="matrix(0.5, -0.86, 0.86, 0.5, -159.96, -45.54) rotate(4.5)">Passes to box</text>
-    </g>
+    <div class="logo-screenshot-container">
+      <img src="https://datamb.football/logo.png" alt="Logo">
+      <div id="similarPlayersContainer"></div>
+      <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
     
-    <g class="radar_label">
-        <text class="label" data-type="Passes" data-idx="5" transform="matrix(-0.38, -0.93, 0.93, -0.38, -147.23, 52.82) rotate(3.87)">xG</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Exits" data-idx="4" transform="translate(-80.53 150.9) rotate(20.3)">NPG</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Aerial" data-idx="3" transform="translate(59.06 160.66) rotate(-28.32)">Aerial%</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Def Actions" data-idx="2" transform="translate(161.70 -2.45) rotate(100.11)">Passes Rec</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Shotstopping" data-idx="1" transform="translate(97.10 -129.22) rotate(51.09)">Att Actions</text>
-    </g>
-    
-    
-  
-  
-  <circle class="blackCircle" r="150" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
-  <circle class="gridCircle" r="150" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="128" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="90" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="60" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="30" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle></g>
-                                  
-    
-   
-  <line x1="0" y1="0" x2="7.37" y2="149.57" stroke="#D3D3D3" stroke-width="1" transform="translate(-7.36, -149.8)"></line>
-  <line x1="0" y1="0" x2="-112.26" y2="99.60" stroke="#D3D3D3" stroke-width="1" transform="translate(112.11, -99.6)"></line>
-  <line x1="0" y1="0" x2="-147.68" y2="-25.48" stroke="#D3D3D3" stroke-width="1" transform="translate(147.82, 25.44)"></line>
-  <line x1="0" y1="0" x2="-72.34" y2="-131.68" stroke="#D3D3D3" stroke-width="1" transform="translate(72.34, 131.4)"></line>
-  <line x1="0" y1="0" x2="57.50" y2="-138.88" stroke="#D3D3D3" stroke-width="1" transform="translate(-57.53, 138.51)"></line>
-  <line x1="0" y1="0" x2="144.16" y2="-41.52" stroke="#D3D3D3" stroke-width="1" transform="translate(-144.14, 41.48)"></line>
-  <line x1="0" y1="0" x2="122.14" y2="86.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-122.357, -86.768)"></line>
-  
-  
-  
-  <g class="radarWrapper"></g>
-  </g></g>    
-  <div id="insertHere"></div>
-</div>
+    <div id="insertHere"></div>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <div class="toggle-icon"></div>
 
 <script>
-   
-  const allData1 = [];
+ 
+ const allData1 = [];
   const allData2 = [];
   let allDataAsString = '';
   
@@ -1118,46 +889,688 @@ const urls2 = [
 
 
 
-function _0x3b15(_0x29b2d4,_0x20ed8f){const _0x5d7a42=_0x5d7a();return _0x3b15=function(_0x3b15d3,_0xeb2371){_0x3b15d3=_0x3b15d3-0x10f;let _0x5932a6=_0x5d7a42[_0x3b15d3];return _0x5932a6;},_0x3b15(_0x29b2d4,_0x20ed8f);}const _0x2da1f6=_0x3b15;(function(_0x421302,_0x23f4a5){const _0x4529a5=_0x3b15,_0x4ab46a=_0x421302();while(!![]){try{const _0x5c29f5=parseInt(_0x4529a5(0x1aa))/0x1*(-parseInt(_0x4529a5(0x17f))/0x2)+-parseInt(_0x4529a5(0x123))/0x3*(-parseInt(_0x4529a5(0x148))/0x4)+parseInt(_0x4529a5(0x177))/0x5*(-parseInt(_0x4529a5(0x183))/0x6)+parseInt(_0x4529a5(0x164))/0x7+parseInt(_0x4529a5(0x1b6))/0x8*(-parseInt(_0x4529a5(0x139))/0x9)+-parseInt(_0x4529a5(0x11d))/0xa*(parseInt(_0x4529a5(0x1ba))/0xb)+-parseInt(_0x4529a5(0x15d))/0xc*(-parseInt(_0x4529a5(0x17a))/0xd);if(_0x5c29f5===_0x23f4a5)break;else _0x4ab46a['push'](_0x4ab46a['shift']());}catch(_0x42ff14){_0x4ab46a['push'](_0x4ab46a['shift']());}}}(_0x5d7a,0x4bbf7));const fetchPromises1=urls1[_0x2da1f6(0x117)](_0x5ea5d6=>fetch(_0x5ea5d6)[_0x2da1f6(0x178)](_0x44ab49=>_0x44ab49[_0x2da1f6(0x14b)]())),fetchPromises2=urls2[_0x2da1f6(0x117)](_0x3216d9=>fetch(_0x3216d9)[_0x2da1f6(0x178)](_0x536b69=>_0x536b69[_0x2da1f6(0x14b)]()));function processAndStoreData1(_0x54654d){const _0x53e712=_0x2da1f6;let _0xb58eb4=0x1;_0x54654d[_0x53e712(0x19c)](_0x8ff5ef=>{const _0x4c72f3=_0x53e712,_0x3c7ff0=XLSX['read'](new Uint8Array(_0x8ff5ef),{'type':'array'}),_0x5bfde6=_0x3c7ff0['SheetNames'][0x0],_0x576d4e=_0x3c7ff0['Sheets'][_0x5bfde6],_0x1ac969=XLSX[_0x4c72f3(0x113)][_0x4c72f3(0x1b0)](_0x576d4e,{'header':0x1}),_0x57e2ac=_0x1ac969['slice'](0x1);_0x57e2ac['forEach'](_0x489baf=>{const _0x1484a4=_0x4c72f3;_0x489baf[_0x1484a4(0x163)](''+_0xb58eb4++),_0x489baf[0xf]=_0x489baf[0x1]+'\x2023/24';const _0x31e575=[_0x489baf[0x0],_0x489baf[0xf],_0x489baf[0x2],_0x489baf[0x3],_0x489baf[0x9],_0x489baf[0x5],_0x489baf[0x7],_0x489baf[0x8],_0x489baf[0xb],_0x489baf[0xa],_0x489baf[0x6],_0x489baf[0x4]];allData1['push'](_0x31e575);});});const _0x15ad91=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x4697d3=_0x15ad91['map'](_0x8f0b79=>allData1[_0x53e712(0x117)](_0x1e5f98=>parseFloat(_0x1e5f98[_0x8f0b79]))),_0x4e544c=_0x4697d3[_0x53e712(0x117)](_0x21d238=>{const _0x313c3f=_0x53e712,_0x76a57e=[..._0x21d238][_0x313c3f(0x14d)]((_0x45730f,_0x349362)=>_0x45730f-_0x349362);return _0x21d238[_0x313c3f(0x117)](_0x393d4e=>{const _0xce2bf7=_0x313c3f,_0x487dad=_0x76a57e['indexOf'](_0x393d4e)+0x1;return _0x487dad/_0x76a57e[_0xce2bf7(0x150)];});});allData1[_0x53e712(0x19c)]((_0x54cb23,_0x4fa2e7)=>{const _0x5a4b74=_0x53e712;_0x15ad91[_0x5a4b74(0x19c)]((_0x486eec,_0x5e9f5c)=>{const _0x3d1713=_0x5a4b74;_0x54cb23[_0x486eec]=_0x4e544c[_0x5e9f5c][_0x4fa2e7][_0x3d1713(0x116)](0x3);});});}function processAndStoreData(_0x22f0ee){const _0x48105f=_0x2da1f6;let _0x17b3d4=0x1;_0x22f0ee[_0x48105f(0x19c)](_0x6f0f71=>{const _0x208058=_0x48105f,_0x355a65=XLSX[_0x208058(0x17b)](new Uint8Array(_0x6f0f71),{'type':'array'}),_0x5cfb55=_0x355a65[_0x208058(0x149)][0x0],_0x50b3f2=_0x355a65[_0x208058(0x1b2)][_0x5cfb55],_0x2e6326=XLSX[_0x208058(0x113)][_0x208058(0x1b0)](_0x50b3f2,{'header':0x1}),_0x41c582=_0x2e6326[_0x208058(0x19a)](0x1);_0x41c582[_0x208058(0x19c)](_0x1c834c=>{const _0x2be991=_0x208058;_0x1c834c[_0x2be991(0x163)](''+_0x17b3d4++),_0x1c834c[0xf]=_0x1c834c[0x1]+_0x2be991(0x133);const _0x154039=[_0x1c834c[0x0],_0x1c834c[0xf],_0x1c834c[0x2],_0x1c834c[0x3],_0x1c834c[0x9],_0x1c834c[0x5],_0x1c834c[0x7],_0x1c834c[0x8],_0x1c834c[0xb],_0x1c834c[0xa],_0x1c834c[0x6],_0x1c834c[0x4]];allData2['push'](_0x154039);});});const _0x3c20b0=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x3ba99b=_0x3c20b0[_0x48105f(0x117)](_0x331dab=>allData2['map'](_0x521076=>parseFloat(_0x521076[_0x331dab]))),_0x229804=_0x3ba99b[_0x48105f(0x117)](_0x26fa4f=>{const _0x11857d=_0x48105f,_0x290274=[..._0x26fa4f][_0x11857d(0x14d)]((_0x335e07,_0x196e69)=>_0x335e07-_0x196e69);return _0x26fa4f[_0x11857d(0x117)](_0x246a0d=>{const _0x4370d0=_0x11857d,_0xec77c9=_0x290274['indexOf'](_0x246a0d)+0x1;return _0xec77c9/_0x290274[_0x4370d0(0x150)];});});allData2[_0x48105f(0x19c)]((_0x41f4bf,_0x26ed8f)=>{const _0xcbe20f=_0x48105f;_0x3c20b0[_0xcbe20f(0x19c)]((_0x5dee69,_0x3c3aa4)=>{const _0x8e392=_0xcbe20f;_0x41f4bf[_0x5dee69]=_0x229804[_0x3c3aa4][_0x26ed8f][_0x8e392(0x116)](0x3);});});}Promise[_0x2da1f6(0x169)](fetchPromises1)[_0x2da1f6(0x178)](_0x25ff04=>{processAndStoreData(_0x25ff04),Promise['all'](fetchPromises2)['then'](_0x63ee76=>{const _0x47f4ac=_0x3b15;processAndStoreData1(_0x63ee76);const _0x5484ef=allData2[_0x47f4ac(0x14c)](allData1);_0x5484ef[_0x47f4ac(0x19c)]((_0x226eb2,_0x1a9211)=>{_0x226eb2[0x0]=''+(_0x1a9211+0x1);}),_0x5484ef['forEach'](_0xfeec9c=>{const _0x5c8f9e=_0x47f4ac;allDataAsString+=_0xfeec9c[_0x5c8f9e(0x1a6)](',')+'\x0a';});const _0x206880=allDataAsString[_0x47f4ac(0x196)]()[_0x47f4ac(0x1a4)]('\x0a'),_0x5f409e=[];for(const _0x470d01 of _0x206880){const _0xb5c22d=_0x470d01[_0x47f4ac(0x1a4)](','),_0x122a4c=_0xb5c22d[0x1],_0x4531d2=_0xb5c22d[0x3],_0x33fad0=_0xb5c22d[0x2],_0x2f7b30=_0x122a4c+','+_0x4531d2+','+_0x33fad0;_0x5f409e[_0x47f4ac(0x1b5)](_0x2f7b30);}const _0x56ec98=_0x5f409e,_0xc00ff3=document[_0x47f4ac(0x182)](_0x47f4ac(0x10f));_0xc00ff3[_0x47f4ac(0x190)]('autocomplete',_0x47f4ac(0x13d));const _0xdfd211=document[_0x47f4ac(0x182)](_0x47f4ac(0x118)),_0x3e75a1=document[_0x47f4ac(0x182)](_0x47f4ac(0x1c0));function _0x100b6e(){const _0x126920=_0x47f4ac,_0x5dfe5c=_0x4dbb10(_0xc00ff3[_0x126920(0x11f)][_0x126920(0x12f)]()),_0x5a6125=_0x56ec98[_0x126920(0x172)](function(_0x85eaaa){const _0x19320a=_0x126920,[_0x37ee0f]=_0x85eaaa[_0x19320a(0x1a4)](','),_0x3389f9=_0x4dbb10(_0x37ee0f[_0x19320a(0x12f)]());return _0x3389f9[_0x19320a(0x199)](_0x5dfe5c);});_0xdfd211[_0x126920(0x180)]='',_0x5a6125[_0x126920(0x19c)](function(_0xeacfb3){const _0x1d2795=_0x126920,[_0x4b5ff3,_0x29feac,_0x2659b8]=_0xeacfb3[_0x1d2795(0x1a4)](','),_0x1d0561=document['createElement'](_0x1d2795(0x186));_0x1d0561[_0x1d2795(0x1bb)][_0x1d2795(0x1b9)](_0x1d2795(0x126));const _0x4e19dc=document[_0x1d2795(0x125)]('span');_0x4e19dc[_0x1d2795(0x167)]=_0x4b5ff3,_0x4e19dc[_0x1d2795(0x1bb)][_0x1d2795(0x1b9)](_0x1d2795(0x192)),_0x1d0561[_0x1d2795(0x1b1)](_0x4e19dc);const _0x4fa78f=document[_0x1d2795(0x125)](_0x1d2795(0x1ab));_0x4fa78f[_0x1d2795(0x167)]='\x20('+_0x2659b8+',',_0x4fa78f['classList'][_0x1d2795(0x1b9)](_0x1d2795(0x138)),_0x1d0561[_0x1d2795(0x1b1)](_0x4fa78f);const _0x2588a2=document[_0x1d2795(0x125)](_0x1d2795(0x1ab));_0x2588a2[_0x1d2795(0x167)]='\x20'+_0x29feac+')',_0x2588a2[_0x1d2795(0x1bb)][_0x1d2795(0x1b9)](_0x1d2795(0x11e)),_0x1d0561[_0x1d2795(0x1b1)](_0x2588a2),_0x1d0561[_0x1d2795(0x112)](_0x1d2795(0x15c),function(_0x25d81b){const _0x3b3143=_0x1d2795,_0x487228=_0x25d81b['target']['closest'](_0x3b3143(0x11b));if(_0x487228){const _0x34afde=_0x487228[_0x3b3143(0x166)](_0x3b3143(0x16e))['textContent'],_0x525879=_0x487228[_0x3b3143(0x166)](_0x3b3143(0x189))[_0x3b3143(0x167)][_0x3b3143(0x196)](),_0x43d7a=_0x487228[_0x3b3143(0x166)](_0x3b3143(0x1a1))['textContent'][_0x3b3143(0x196)]()[_0x3b3143(0x157)](_0x3b3143(0x119))[_0x3b3143(0x13a)](/[\u0300-\u036f\s]/g,'')[_0x3b3143(0x13a)](/[^a-zA-Z]/g,''),_0x5d9d42=_0x34afde+','+_0x43d7a+','+_0x525879[_0x3b3143(0x147)](0x1,_0x525879[_0x3b3143(0x150)]-0x1);_0xc00ff3[_0x3b3143(0x11f)]=_0x5d9d42;const _0xc113c0=new KeyboardEvent(_0x3b3143(0x158),{'key':_0x3b3143(0x176)});_0xc00ff3['dispatchEvent'](_0xc113c0);}}),_0xdfd211[_0x1d2795(0x1b1)](_0x1d0561);}),_0x5dfe5c===''&&_0x5a6125[_0x126920(0x150)]===0x0?_0xdfd211['style']['display']=_0x126920(0x17c):(_0xdfd211[_0x126920(0x170)][_0x126920(0x141)]=_0x126920(0x1a7),_0xdfd211[_0x126920(0x170)][_0x126920(0x1a3)]=_0x126920(0x121),_0xdfd211['style']['position']='relative',_0xdfd211['style'][_0x126920(0x111)]=_0x126920(0x140),_0xdfd211[_0x126920(0x170)][_0x126920(0x1ad)]='9999',_0xdfd211[_0x126920(0x170)][_0x126920(0x130)]=_0x126920(0x1ae),_0xdfd211['style'][_0x126920(0x194)]='267px',_0xdfd211[_0x126920(0x170)]['overflowY']=_0x126920(0x173),_0xdfd211['style'][_0x126920(0x179)]=_0x126920(0x1a9)),_0x5dfe5c===''&&(_0xdfd211['style'][_0x126920(0x141)]='none');}_0xc00ff3[_0x47f4ac(0x112)](_0x47f4ac(0x12e),_0x100b6e),_0xc00ff3['addEventListener'](_0x47f4ac(0x158),function(_0xf4bd4c){const _0x202fad=_0x47f4ac;if(_0xf4bd4c['key']==='Enter')searchButton1[_0x202fad(0x15c)]();else _0xf4bd4c[_0x202fad(0x12b)]===_0x202fad(0x19f)&&_0x100b6e();});const _0x4d168c=allDataAsString;let _0x2d135e=_0x4d168c[_0x47f4ac(0x196)]()[_0x47f4ac(0x1a4)]('\x0a')['map'](_0x479b45=>_0x479b45[_0x47f4ac(0x1a4)](','));function _0x2f59df(_0x5ddfbc,_0x472cc8){const _0x1924d1=_0x47f4ac;let _0x336240=0x0;for(let _0x34480f=0x4;_0x34480f<=0xa;_0x34480f++){const _0x919317=parseFloat(_0x5ddfbc[_0x34480f]),_0x12449d=parseFloat(_0x472cc8[_0x34480f]);_0x336240+=Math['pow'](_0x919317-_0x12449d,0x2);}return Math[_0x1924d1(0x135)](_0x336240);}const _0x46d712=[_0x47f4ac(0x18a),'result-color-pink',_0x47f4ac(0x1a8),_0x47f4ac(0x16f),_0x47f4ac(0x127),'result-color-rose',_0x47f4ac(0x14a),_0x47f4ac(0x144),_0x47f4ac(0x18e),'result-color-4',_0x47f4ac(0x171),_0x47f4ac(0x132),_0x47f4ac(0x124),_0x47f4ac(0x19e),_0x47f4ac(0x18f),'result-color-10',_0x47f4ac(0x1be),_0x47f4ac(0x1b7),_0x47f4ac(0x136),_0x47f4ac(0x16c),'result-color-15',_0x47f4ac(0x134),_0x47f4ac(0x12d),_0x47f4ac(0x110),_0x47f4ac(0x1bf),_0x47f4ac(0x114),_0x47f4ac(0x146),_0x47f4ac(0x120),_0x47f4ac(0x191),_0x47f4ac(0x1bc),'result-color-25',_0x47f4ac(0x17e),_0x47f4ac(0x1af),_0x47f4ac(0x168),_0x47f4ac(0x165),_0x47f4ac(0x128),_0x47f4ac(0x115),'result-color-32',_0x47f4ac(0x188),_0x47f4ac(0x185),'result-color-35',_0x47f4ac(0x137),'result-color-37',_0x47f4ac(0x15a),_0x47f4ac(0x1a0),_0x47f4ac(0x198),'result-color-41',_0x47f4ac(0x15e),_0x47f4ac(0x159),_0x47f4ac(0x13c),'result-color-45',_0x47f4ac(0x175),_0x47f4ac(0x1b3),_0x47f4ac(0x16a)];let _0x51290c=[];function _0x4dbb10(_0x5f4bcf){const _0xc1a1d9=_0x47f4ac;return _0x5f4bcf[_0xc1a1d9(0x157)]('NFD')[_0xc1a1d9(0x13a)](/[\u0300-\u036f\s]/g,'')[_0xc1a1d9(0x13a)](/Ø/g,'O')[_0xc1a1d9(0x13a)](/ø/g,'o')[_0xc1a1d9(0x13a)](/ı/g,'i');}function _0x48ea16(_0x42ee24){const _0x2ab509=_0x47f4ac,_0x220064=_0x42ee24[_0x2ab509(0x1a4)](',')[_0x2ab509(0x117)](_0x286dca=>_0x286dca[_0x2ab509(0x196)]()),_0x2a43f4=_0x220064[0x0];let _0x2a5736,_0x36e286;_0x220064[_0x2ab509(0x150)]>0x1&&(_0x2a5736=_0x220064[0x1][_0x2ab509(0x196)](),_0x220064[_0x2ab509(0x150)]>0x2&&(_0x36e286=_0x220064[0x2][_0x2ab509(0x196)]()));const _0x28414b=_0x2d135e['filter'](_0x47e145=>{const _0xa039a1=_0x2ab509,_0x42676d=_0x4dbb10(_0x47e145[0x1][_0xa039a1(0x12f)]()),_0x3e011c=_0x4dbb10(_0x47e145[0x2][_0xa039a1(0x12f)]()),_0x67497f=_0x47e145[0x3][_0xa039a1(0x196)]()[_0xa039a1(0x12f)](),_0x5adc46=_0x42676d[_0xa039a1(0x199)](_0x4dbb10(_0x2a43f4['toLowerCase']())),_0x1e8e46=!_0x2a5736||_0x67497f===_0x4dbb10(_0x2a5736[_0xa039a1(0x12f)]()),_0x267342=!_0x36e286||_0x3e011c===_0x4dbb10(_0x36e286[_0xa039a1(0x12f)]());return _0x5adc46&&_0x1e8e46&&_0x267342;});return _0x28414b;}function _0x37b319(_0x91f965,_0x5632e0,_0x43c09f){const _0x493772=_0x47f4ac,_0x4652d5=document[_0x493772(0x182)](_0x493772(0x151)),_0x58441e=[],_0x366823=_0x4652d5[_0x493772(0x166)]('th')!==null,_0x31e713=_0x366823?_0x4652d5['querySelector'](_0x493772(0x187)):document[_0x493772(0x125)](_0x493772(0x187));_0x31e713[_0x493772(0x1bb)]['add'](_0x493772(0x11a));if(!_0x366823){const _0x139599=document[_0x493772(0x125)]('tr');for(let _0x47020a=0x1;_0x47020a<_0x58441e[_0x493772(0x150)];_0x47020a++){const _0x4dcbd2=document[_0x493772(0x125)]('th');_0x4dcbd2[_0x493772(0x167)]=_0x58441e[_0x47020a],_0x139599[_0x493772(0x1b1)](_0x4dcbd2);}const _0x59cd69=document[_0x493772(0x125)]('th');_0x59cd69[_0x493772(0x167)]='',_0x139599[_0x493772(0x1b1)](_0x59cd69),_0x31e713[_0x493772(0x1b1)](_0x139599);}const _0x100b50=_0x2d135e[_0x5632e0],_0xdf744a=document[_0x493772(0x125)]('tr');for(let _0x2a46b4=0x1;_0x2a46b4<=0xb;_0x2a46b4++){if(_0x2a46b4===0x1||_0x2a46b4===0x2||_0x2a46b4===0x3||_0x2a46b4===0xb){const _0x35820e=document[_0x493772(0x125)]('td');_0x2a46b4===0xb?_0x35820e[_0x493772(0x167)]=_0x100b50[_0x2a46b4]+_0x493772(0x19d):_0x35820e['textContent']=_0x100b50[_0x2a46b4]+',',_0x35820e[_0x493772(0x1bb)][_0x493772(0x1b9)](_0x43c09f),_0xdf744a['appendChild'](_0x35820e);}}const _0x459c8e=document[_0x493772(0x125)]('td'),_0x25e296=document[_0x493772(0x125)](_0x493772(0x12a));_0x25e296[_0x493772(0x167)]='x',_0x25e296['classList']['add'](_0x493772(0x162)),_0x459c8e[_0x493772(0x1bb)][_0x493772(0x1b9)]('x-cell'),_0x25e296[_0x493772(0x112)](_0x493772(0x15c),function(){const _0x5286bd=_0x493772;_0xdf744a[_0x5286bd(0x15b)]();const _0x1ea1c0=document[_0x5286bd(0x14e)](_0x5286bd(0x1a5)+_0x43c09f),_0x4d2706=document[_0x5286bd(0x14e)](_0x5286bd(0x145)+_0x43c09f),_0x263dfc=document[_0x5286bd(0x14e)](_0x5286bd(0x18d)+_0x43c09f);_0x1ea1c0[_0x5286bd(0x19c)](_0x436493=>_0x436493[_0x5286bd(0x15b)]()),_0x4d2706[_0x5286bd(0x19c)](_0x2564ee=>_0x2564ee['remove']()),_0x263dfc[_0x5286bd(0x19c)](_0x4308a6=>_0x4308a6[_0x5286bd(0x15b)]());const _0x5d6212=document[_0x5286bd(0x14e)]('.metrics-table\x20tr:not(:first-child)');if(_0x5d6212[_0x5286bd(0x150)]>0x0){const _0x306d80=_0x5d6212[_0x5d6212[_0x5286bd(0x150)]-0x1],_0xf4cd88=_0x306d80[_0x5286bd(0x15f)][_0x5286bd(0x167)][_0x5286bd(0x1a4)](',')[0x0],_0x440bf3=_0x2d135e[_0x5286bd(0x18c)](_0xff168=>_0xff168[0x1]===_0xf4cd88);_0x440bf3&&_0x3e8012(_0x440bf3);}else{const _0x4ddbee=document[_0x5286bd(0x182)](_0x5286bd(0x161));_0x4ddbee&&(_0x4ddbee[_0x5286bd(0x180)]='');}}),_0x459c8e['appendChild'](_0x25e296),_0xdf744a[_0x493772(0x1b1)](_0x459c8e),_0x31e713[_0x493772(0x1b1)](_0xdf744a);!_0x366823&&_0x4652d5['appendChild'](_0x31e713);const _0x2c4778=_0x2d135e[_0x5632e0][_0x493772(0x1a6)](',\x20'),_0x17ff28=0x96,_0x267c58=[0x0,0x0],_0x36c0fb=[0x0,0x2*Math['PI']/0x7,0x4*Math['PI']/0x7,0x6*Math['PI']/0x7,0x8*Math['PI']/0x7,0xa*Math['PI']/0x7,0xc*Math['PI']/0x7];function _0x5dec12(_0x13cd27,_0x50cf4f){const _0x23c91c=_0x493772;let _0x369da7=_0x36c0fb[_0x13cd27-0x1];_0x369da7+=0x2*Math['PI']/0x7*0.2;const _0x1aac0f=0x96*_0x50cf4f*Math[_0x23c91c(0x19b)](_0x369da7),_0x4fb374=0x96*_0x50cf4f*Math['sin'](_0x369da7);return{'x':_0x1aac0f,'y':_0x4fb374};}const _0x170465=document[_0x493772(0x166)]('.radar'),_0x2d9614=_0x170465['appendChild'](document['createElementNS'](_0x493772(0x13b),'g'));_0x2d9614[_0x493772(0x190)](_0x493772(0x195),'translate(223,225.77)'),_0x2d9614[_0x493772(0x180)]='';const _0x39b0df=[],_0xe8a227=_0x2c4778['split'](',');for(let _0x339b61=0x4;_0x339b61<0xb;_0x339b61++){_0x39b0df[_0x493772(0x1b5)]({'axis':_0x339b61-0x3,'value':parseFloat(_0xe8a227[_0x339b61])});}const _0x3bb38d=_0x39b0df[_0x493772(0x117)](({axis:_0x10cd47,value:_0x4098f0})=>{const {x:_0x4fcd89,y:_0x5bbd0d}=_0x5dec12(_0x10cd47,_0x4098f0);return _0x4fcd89+','+_0x5bbd0d;})[_0x493772(0x1a6)]('\x20'),_0x4341d7=document[_0x493772(0x131)](_0x493772(0x13b),_0x493772(0x142));_0x4341d7[_0x493772(0x190)](_0x493772(0x160),'radarLines\x20'+_0x43c09f),_0x4341d7[_0x493772(0x190)](_0x493772(0x1b4),_0x3bb38d+'\x20'+_0x3bb38d[_0x493772(0x1a4)]('\x20')[0x0]),_0x4341d7[_0x493772(0x190)]('stroke-width','3'),_0x4341d7[_0x493772(0x190)](_0x493772(0x143),'none'),_0x2d9614['appendChild'](_0x4341d7);const _0x517586=document[_0x493772(0x131)](_0x493772(0x13b),_0x493772(0x154));_0x517586[_0x493772(0x190)]('class',_0x493772(0x1b8)+_0x43c09f),_0x517586[_0x493772(0x190)](_0x493772(0x1b4),_0x3bb38d),_0x517586[_0x493772(0x170)][_0x493772(0x197)]='0.2',_0x2d9614[_0x493772(0x1b1)](_0x517586),_0x39b0df[_0x493772(0x19c)](({axis:_0x47830b,value:_0x1b2c2e})=>{const _0x487b1e=_0x493772,{x:_0x4e7958,y:_0x3538e0}=_0x5dec12(_0x47830b,_0x1b2c2e),_0x3c676b=document[_0x487b1e(0x131)](_0x487b1e(0x13b),_0x487b1e(0x184));_0x3c676b[_0x487b1e(0x190)](_0x487b1e(0x160),_0x487b1e(0x16b)+_0x43c09f),_0x3c676b[_0x487b1e(0x170)][_0x487b1e(0x197)]=_0x487b1e(0x122),_0x3c676b['setAttribute']('r','6'),_0x3c676b['setAttribute']('cx',_0x4e7958),_0x3c676b['setAttribute']('cy',_0x3538e0),_0x2d9614[_0x487b1e(0x1b1)](_0x3c676b);});}function _0x1b0813(){const _0x5df9a6=_0x47f4ac,_0x558b67=document['getElementById'](_0x5df9a6(0x10f)),_0x21b2ac=document[_0x5df9a6(0x182)](_0x5df9a6(0x12c)),_0x3eeda9=document[_0x5df9a6(0x182)](_0x5df9a6(0x151)),_0x570300=new Set(),_0xf8610b=document['createElement']('ul');_0xf8610b['style']['fontFamily']=_0x5df9a6(0x1ac),_0xf8610b['style'][_0x5df9a6(0x14f)]=_0x5df9a6(0x17c),_0xf8610b[_0x5df9a6(0x170)][_0x5df9a6(0x129)]='9px',_0x3eeda9[_0x5df9a6(0x1b1)](_0xf8610b);let _0x5dd808=0x0;_0x21b2ac[_0x5df9a6(0x112)]('click',function(){const _0x2b14d4=_0x5df9a6,_0xf4be91=_0x558b67['value'],_0x3b56bf=_0x48ea16(_0xf4be91);if(_0x3b56bf){const _0x112a35=parseInt(_0x3b56bf[0x0]),_0x533812=_0x3b56bf[0x1]+'\x20('+_0x3b56bf[0x2]+',\x20'+_0x3b56bf[0x3]+_0x2b14d4(0x1a2)+_0x3b56bf[0xb]+_0x2b14d4(0x19d),_0x42062b=_0x46d712[_0x5dd808%_0x46d712[_0x2b14d4(0x150)]];if(!_0x570300[_0x2b14d4(0x1bd)](_0x533812)){const _0x55713f=document[_0x2b14d4(0x125)]('li');_0x55713f[_0x2b14d4(0x167)]=_0x533812,_0x55713f['classList'][_0x2b14d4(0x1b9)](_0x42062b),_0x37b319(_0x533812,_0x112a35-0x1,_0x42062b),_0x5dd808++;}}});}_0x1b0813();const _0x5eb982=document['createElement']('div');_0x5eb982['id']=_0x47f4ac(0x161);const _0x2ecd92=document[_0x47f4ac(0x182)]('insertHere');_0x2ecd92['appendChild'](_0x5eb982);let _0x55b930=0x0;searchButton1[_0x47f4ac(0x112)](_0x47f4ac(0x15c),function(){const _0x15c061=_0x47f4ac,_0x485561=_0xc00ff3['value'],_0x41483d=_0x48ea16(_0x485561);if(_0x41483d[_0x15c061(0x150)]>0x0){const _0x4dbfc9=_0x41483d[0x0];_0x3e8012(_0x4dbfc9),_0x55b930++;}_0xc00ff3[_0x15c061(0x11f)]='',_0x100b6e();});function _0x3e8012(_0x1985f0){const _0xe3b33e=_0x47f4ac,_0x19cbd7=parseInt(_0x1985f0[0x0])-0x1,_0x410c3c=[],_0x561313=document['querySelectorAll']('.metrics-table\x20tr:not(:first-child)');let _0x17d59c='';if(_0x561313[_0xe3b33e(0x150)]>0x0){const _0x3276b5=_0x561313[_0x561313[_0xe3b33e(0x150)]-0x1],_0x361e4f=_0x3276b5[_0xe3b33e(0x166)](_0xe3b33e(0x193)),_0x13a9e4=Array['from'](_0x361e4f[_0xe3b33e(0x1bb)]);_0x17d59c=_0x13a9e4[_0xe3b33e(0x18c)](_0xf0c95b=>_0xf0c95b[_0xe3b33e(0x13f)](_0xe3b33e(0x174)));}for(let _0x5f2c9c=0x0;_0x5f2c9c<_0x2d135e[_0xe3b33e(0x150)];_0x5f2c9c++){if(_0x5f2c9c!==_0x19cbd7){const _0x5b092d=_0x2f59df(_0x1985f0,_0x2d135e[_0x5f2c9c]);_0x410c3c[_0xe3b33e(0x1b5)]({'index':_0x5f2c9c,'difference':_0x5b092d});}}_0x410c3c[_0xe3b33e(0x14d)]((_0x436a42,_0x4729df)=>_0x436a42['difference']-_0x4729df[_0xe3b33e(0x13e)]);const _0x367096=_0x410c3c[_0xe3b33e(0x19a)](0x0,0x3),_0x35136d=document[_0xe3b33e(0x182)]('similarPlayersContainer');_0x35136d[_0xe3b33e(0x180)]='';const _0x1e3051=document[_0xe3b33e(0x125)](_0xe3b33e(0x187));_0x1e3051[_0xe3b33e(0x1bb)]['add']('similar-table');const _0x5efbda=document[_0xe3b33e(0x125)]('tr'),_0x4bd3da=document['createElement']('th');_0x4bd3da[_0xe3b33e(0x190)]('colspan','5'),_0x4bd3da[_0xe3b33e(0x167)]=_0xe3b33e(0x181)+_0x1985f0[0x1],_0x4bd3da['classList'][_0xe3b33e(0x1b9)](_0x17d59c||_0x46d712[_0x55b930%_0x46d712[_0xe3b33e(0x150)]]),_0x5efbda[_0xe3b33e(0x1b1)](_0x4bd3da),_0x1e3051[_0xe3b33e(0x1b1)](_0x5efbda);const _0x4268e2=document[_0xe3b33e(0x125)]('tr');for(let _0x2d0997=0x0;_0x2d0997<_0x367096[_0xe3b33e(0x150)];_0x2d0997++){const _0x147834=_0x367096[_0x2d0997][_0xe3b33e(0x11c)],_0x4a6707=_0x2d135e[_0x147834][0x1],_0x552b46=document[_0xe3b33e(0x125)]('td');_0x552b46[_0xe3b33e(0x167)]=_0x4a6707,_0x552b46[_0xe3b33e(0x170)][_0xe3b33e(0x155)]=_0xe3b33e(0x17d),_0x552b46[_0xe3b33e(0x170)][_0xe3b33e(0x152)]='underline',_0x552b46[_0xe3b33e(0x170)][_0xe3b33e(0x153)]=_0xe3b33e(0x16d),_0x552b46[_0xe3b33e(0x112)](_0xe3b33e(0x15c),function(){const _0x216ad8=_0xe3b33e,_0xf4c586=document[_0x216ad8(0x182)](_0x216ad8(0x10f)),_0x1f9b67=document[_0x216ad8(0x182)](_0x216ad8(0x12c));_0xf4c586[_0x216ad8(0x11f)]=_0x4a6707,_0x1f9b67['click']();}),_0x4268e2['appendChild'](_0x552b46);}_0x1e3051['appendChild'](_0x4268e2),_0x35136d[_0xe3b33e(0x1b1)](_0x1e3051);}});})[_0x2da1f6(0x156)](_0x2b0e85=>{const _0x5e0299=_0x2da1f6;console[_0x5e0299(0x18b)]('Error\x20fetching\x20or\x20processing\x20data:',_0x2b0e85);});function _0x5d7a(){const _0x5d4564=['table','result-color-33','.age','result-color-blue','error','find','.radarCircle.','result-color-3','result-color-9','setAttribute','result-color-23','fullName','td:first-child','maxHeight','transform','trim','fillOpacity','result-color-40','includes','slice','cos','forEach','\x20min','result-color-8','Backspace','result-color-39','.team',')\x20-\x20','padding','split','.radarPolygon.','join','block','result-color-orange','1px\x20solid\x20#e0e0e0','7058GCvmYb','span','Arial,\x20sans-serif','zIndex','392px','result-color-27','sheet_to_json','appendChild','Sheets','result-color-47','points','push','488CsYcyW','result-color-12','radarPolygon\x20','add','330ZkVbXZ','classList','result-color-24','has','result-color-11','result-color-19','searchButton','searchInput1','result-color-18','left','addEventListener','utils','result-color-20','result-color-31','toFixed','map','matchingNames','NFD','metrics-table','.name','index','38460XLsRbf','team','value','result-color-22','8px','0.86','141FUXloz','result-color-7','createElement','name','result-color-bleu','result-color-30','paddingLeft','button','key','searchButton1','result-color-17','input','toLowerCase','width','createElementNS','result-color-6','\x2024/25','result-color-16','sqrt','result-color-13','result-color-36','age','39987hDgaOl','replace','http://www.w3.org/2000/svg','result-color-44','off','difference','startsWith','1.9px','display','polyline','fill','result-color-2','.radarLines.','result-color-21','substring','6760jwEFXX','SheetNames','result-color-1','arrayBuffer','concat','sort','querySelectorAll','listStyleType','length','resultsTable','textDecoration','cursor','polygon','fontSize','catch','normalize','keyup','result-color-43','result-color-38','remove','click','120XbXSxy','result-color-42','firstChild','class','similarPlayersContainer','x-button','unshift','500913UrUPai','result-color-29','querySelector','textContent','result-color-28','all','result-color-48','radarCircle\x20','result-color-14','pointer','.fullName','result-color-green','style','result-color-5','filter','auto','result-color-','result-color-46','Enter','5hamNiY','then','border','1074671zaieQT','read','none','10.8px','result-color-26','60tDOKqk','innerHTML','Similar\x20data\x20to\x20','getElementById','415518WwzSzd','circle','result-color-34','div'];_0x5d7a=function(){return _0x5d4564;};return _0x5d7a();}
+
+const fetchPromises1 = urls1.map(url => fetch(url).then(response => response.arrayBuffer()));
+const fetchPromises2 = urls2.map(url => fetch(url).then(response => response.arrayBuffer()));
+
+function processAndStoreData1(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+
+            row[15] = `${row[1]} 23/24`;
+              
+            // Reorder columns
+            const reorderedRow = [
+            row[0],
+            row[15],
+            row[2],
+            row[3],
+            row[9],
+            row[5],
+            row[7],
+            row[8],
+            row[11],
+            row[10],
+            row[6],
+            row[4]
+            ];
+
+            allData1.push(reorderedRow);
+        });
+    });
+
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData1.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData1.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
+}
+
+function processAndStoreData(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+
+            row[15] = `${row[1]} 24/25`;
+
+            // Reorder columns
+            const reorderedRow = [
+            row[0],
+            row[15],
+            row[2],
+            row[3],
+            row[9],
+            row[5],
+            row[7],
+            row[8],
+            row[11],
+            row[10],
+            row[6],
+            row[4]
+            ];
+
+            allData2.push(reorderedRow);
+        });
+    });
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData2.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData2.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
+}
+
+Promise.all(fetchPromises1)
+    .then(responses => {
+        processAndStoreData(responses);
+
+    
+        // Fetch and process the remaining files
+        Promise.all(fetchPromises2)
+            .then(responses2 => {
+                processAndStoreData1(responses2);
+
+                // Concatenate intermediate data with new data
+                const finalData = allData2.concat(allData1);
+
+                // Reset and assign new unique IDs
+                finalData.forEach((row, index) => {
+                    row[0] = `${index + 1}`;
+                });
+                
+                finalData.forEach(row => {
+                    allDataAsString += row.join(',') + '\n';
+                });
+
+
+                const inputLines = allDataAsString.trim().split('\n');
+
+      const outputLines = [];
+  
+      for (const line of inputLines) {
+          // Split the line by comma
+          const parts = line.split(',');
+
+          // Extract the desired fields
+          const name = parts[1];
+          const age = parts[3];
+          const club = parts[2];
+
+          // Create the formatted string
+          const outputLine = `${name},${age},${club}`;
+
+          // Add the formatted string to the output array
+          outputLines.push(outputLine);
+      }
+
+const names = outputLines;
+const searchInput = document.getElementById('searchInput1');
+      searchInput.setAttribute("autocomplete", "off");
+ const matchingNamesContainer = document.getElementById("matchingNames");
+const searchButton = document.getElementById("searchButton");
+
+
+function updateMatchingNames() {
+const searchQuery = removeSpecialChars(searchInput.value.toLowerCase());
+const matchingNames = names.filter(function(name) {
+const [fullName] = name.split(",");
+  const normalizedName = removeSpecialChars(fullName.toLowerCase());
+    return normalizedName.includes(searchQuery);
+});
+
+matchingNamesContainer.innerHTML = "";
+
+matchingNames.forEach(function(name) {
+  const [fullName, team, age] = name.split(",");
+
+  const nameElement = document.createElement("div");
+  nameElement.classList.add("name");
+
+  const fullNameElement = document.createElement("span");
+  fullNameElement.textContent = fullName;
+  fullNameElement.classList.add("fullName");
+  nameElement.appendChild(fullNameElement);
+
+  const ageElement = document.createElement("span");
+  ageElement.textContent = " (" + age + ",";
+  ageElement.classList.add("age");
+  nameElement.appendChild(ageElement);
+
+  const teamElement = document.createElement("span");
+  teamElement.textContent = " " + team + ")";
+  teamElement.classList.add("team");
+  nameElement.appendChild(teamElement);
+
+  nameElement.addEventListener("click", function(event) {
+    const clickedElement = event.target.closest(".name");
+    if (clickedElement) {
+      const fullName = clickedElement.querySelector(".fullName").textContent;
+      const age = clickedElement.querySelector(".age").textContent.trim();
+      const team = clickedElement.querySelector(".team").textContent
+      .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f\s]/g, '')
+      .replace(/[^a-zA-Z]/g, '');  
+      const searchQuery = fullName + "," + team + "," + age.substring(1, age.length - 1);
+  
+      searchInput.value = searchQuery; // Set the full query as the search input value
+      const enterKeyEvent = new KeyboardEvent("keyup", { key: "Enter" });
+      searchInput.dispatchEvent(enterKeyEvent); // Dispatch enter key event
+    }
+  });
+
+  matchingNamesContainer.appendChild(nameElement);
+              });
+            
+              if (searchQuery === "" && matchingNames.length === 0) {
+                matchingNamesContainer.style.display = "none";
+              } else {
+                matchingNamesContainer.style.display = "block";
+                matchingNamesContainer.style.padding = "8px";
+                matchingNamesContainer.style.position = "relative";
+                matchingNamesContainer.style.left = "13.3px";
+                matchingNamesContainer.style.zIndex = "9999"; // Set a high z-index value
+                matchingNamesContainer.style.width = "377px"; // Match the width of the search input
+                matchingNamesContainer.style.maxHeight = "267px"; // Limit height for long lists
+                matchingNamesContainer.style.overflowY = "auto"; // Enable scrolling if content exceeds height
+          
+                matchingNamesContainer.style.border = "1px solid #e0e0e0"; // Light gray border
+              }
+             
+              if (searchQuery === "") {
+                matchingNamesContainer.style.display = "none";
+              }
+            }
+
+searchInput.addEventListener("input", updateMatchingNames);
+searchInput.addEventListener("keyup", function(event) {
+if (event.key === "Enter") {
+  searchButton1.click(); // Trigger the search button click event
+} else if (event.key === "Backspace") {
+  updateMatchingNames();
+}
+});       
+
+
+
+
+const csvData = allDataAsString;
+let dataArray = csvData.trim().split('\n').map(line => line.split(','));
+
+
+
+
+function calculateEuclideanDifference(data1, data2) {
+let difference = 0;
+for (let i = 4; i <= 10; i++) {
+const metric1 = parseFloat(data1[i]);
+const metric2 = parseFloat(data2[i]);
+difference += Math.pow(metric1 - metric2, 2);
+}
+return Math.sqrt(difference);
+}
+
+
+
+const colorClasses = ['result-color-1', 'result-color-2', 'result-color-3', 'result-color-4', 'result-color-5', 'result-color-6', 'result-color-7', 'result-color-8', 'result-color-9', 'result-color-10', 'result-color-11', 'result-color-12', 'result-color-13', 'result-color-14', 'result-color-15', 'result-color-16', 'result-color-17', 'result-color-18', 'result-color-19', 'result-color-20', 'result-color-21', 'result-color-22', 'result-color-23', 'result-color-24', 'result-color-25', 'result-color-26', 'result-color-27', 'result-color-28', 'result-color-29', 'result-color-30', 'result-color-31', 'result-color-32', 'result-color-33', 'result-color-34', 'result-color-35', 'result-color-36', 'result-color-37'];
+
+let searchResults = []; // Declare the search results variable
+
+
+function removeSpecialChars(str) {
+return str.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '') 
+.replace(/Ø/g, 'O')
+.replace(/ø/g, 'o')
+.replace(/ı/g, 'i');
+}
+
+function search(query) {
+const queryParts = query.split(',').map(part => part.trim()); // Split the query by commas and trim whitespace
+const name = queryParts[0]; // Extract the name part
+let age, team;
+
+// Extract age and team if they exist
+if (queryParts.length > 1) {
+age = queryParts[1].trim(); // Trim any leading or trailing spaces
+if (queryParts.length > 2) {
+team = queryParts[2].trim(); // Trim any leading or trailing spaces
+}
+}
+
+
+const results = dataArray.filter(data => {
+const normalizedName = removeSpecialChars(data[1].toLowerCase());
+const normalizedTeam = removeSpecialChars(data[2].toLowerCase());
+const normalizedAge = data[3].trim().toLowerCase(); // Trim any leading or trailing spaces
+
+
+// Check if the name matches
+const nameMatches = normalizedName.includes(removeSpecialChars(name.toLowerCase()));
+
+// Check if the age matches (or if age is not provided)
+const ageMatches = !age || normalizedAge === removeSpecialChars(age.toLowerCase());
+
+// Check if the team matches (or if team is not provided)
+const teamMatches = !team || normalizedTeam === removeSpecialChars(team.toLowerCase());
+
+// Return true if name matches and either age or team matches
+return nameMatches && ageMatches && teamMatches;
+});
+
+return results;
+}
+
+
+function createTable(teamName, teamIndex, color) {
+const resultsTable = document.getElementById('resultsTable');
+
+const headerNames = [
+];
+
+// Check if table headers exist
+const headersExist = resultsTable.querySelector('th') !== null;
+
+const table = headersExist ? resultsTable.querySelector('table') : document.createElement('table');
+table.classList.add('metrics-table');
+
+if (!headersExist) {
+// Create the table header
+const headerRow = document.createElement('tr');
+for (let i = 1; i < headerNames.length; i++) {
+const th = document.createElement('th');
+th.textContent = headerNames[i];
+headerRow.appendChild(th);
+}
+// We don't need a separate header for the x button anymore
+table.appendChild(headerRow);
+}
+
+
+
+
+const teamData = dataArray[teamIndex];
+const dataRow = document.createElement('tr');
+dataRow.style.display = 'flex';
+dataRow.style.alignItems = 'center';
+dataRow.style.position = 'relative';
+
+// Create a container for player data
+const playerDataContainer = document.createElement('div');
+playerDataContainer.style.display = 'flex';
+playerDataContainer.style.alignItems = 'center';
+playerDataContainer.style.flexGrow = '1';
+
+for (let i = 1; i <= 11; i++) {
+if (i === 1 || i === 2 || i === 3 || i === 11) {
+const td = document.createElement('td');
+if (i === 11) {
+td.textContent = teamData[i] + ' min';
+} else {
+td.textContent = teamData[i] + ',';
+}
+td.classList.add(color);
+playerDataContainer.appendChild(td);
+}
+}
+
+dataRow.appendChild(playerDataContainer);
+
+// Add a separate table cell for the "x" column
+const xCell = document.createElement('td');
+const xButton = document.createElement('button');
+xButton.textContent = 'x';
+xButton.classList.add('x-button');
+xCell.classList.add('x-cell');
+xButton.addEventListener('click', function () {
+  dataRow.remove(); // Remove the corresponding row from the table
+  const radarPolygons = document.querySelectorAll(`.radarPolygon.${color}`);
+  const radarLines = document.querySelectorAll(`.radarLines.${color}`);
+  const radarCircles = document.querySelectorAll(`.radarCircle.${color}`);
+
+  radarPolygons.forEach((polygon) => polygon.remove());
+  radarLines.forEach((line) => line.remove());
+  radarCircles.forEach((circle) => circle.remove());
+
+  // Get all remaining rows in the table
+  const remainingRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  
+  if (remainingRows.length > 0) {
+      // Get the last player's name from the last row
+      const lastRow = remainingRows[remainingRows.length - 1];
+      const lastPlayerName = lastRow.querySelector('td:first-child').textContent.split(',')[0];
+      
+      // Update similar players for the last remaining player
+      const lastPlayerData = dataArray.find(player => player[1] === lastPlayerName);
+      if (lastPlayerData) {
+          updateSimilarPlayers(lastPlayerData);
+      }
+  } else {
+      // If no players left, clear the similar players container
+      const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+          similarPlayersContainer.innerHTML = '';
+      }
+  }
+});
+
+xCell.appendChild(xButton);
+dataRow.appendChild(xCell);
+
+table.appendChild(dataRow);
+
+if (!headersExist) {
+resultsTable.appendChild(table);
+}
+
+const combResults = dataArray[teamIndex].join(', ');
+
+
+
+const outerRadius = 165;
+const center = [0, 0];
+const angles = [0, 2 * Math.PI / 7, 4 * Math.PI / 7, 6 * Math.PI / 7, 8 * Math.PI / 7, 10 * Math.PI / 7, 12 * Math.PI / 7];
+
+function axisValueToCartesian(axis, value) {
+    let angle = angles[axis - 1];
+    angle += (2 * Math.PI / 7) * 0.2;
+    const x = outerRadius * value * Math.cos(angle);
+    const y = outerRadius * value * Math.sin(angle);
+    return { x, y };
+}
+
+const svg = document.querySelector('.radar');
+const radarWrapper = svg.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
+radarWrapper.setAttribute('transform', 'translate(0,0)');
+radarWrapper.innerHTML = '';
+
+const data = [];
+const rowCols = combResults.split(',');
+for (let i = 4; i < 11; i++) {
+data.push({ axis: i - 3, value: parseFloat(rowCols[i]) });
+}
+
+const points = data.map(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+return `${x},${y}`;
+}).join(' ');
+
+const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+polyline.setAttribute('class', `radarLines ${color}`); // Add the color class to the polyline
+polyline.setAttribute('points', `${points} ${points.split(' ')[0]}`);
+polyline.setAttribute('stroke-width', '3');
+polyline.setAttribute('fill', 'none');
+radarWrapper.appendChild(polyline);
+
+const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+polygon.setAttribute('class', `radarPolygon ${color}`); // Add the color class to the polygon
+polygon.setAttribute('points', points);
+polygon.style.fillOpacity = '0.2';
+radarWrapper.appendChild(polygon);
+
+data.forEach(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+circle.setAttribute('class', `radarCircle ${color}`); // Add the color class to the circle
+circle.style.fillOpacity = '0.86'; // Set the opacity to 1 (fully opaque)
+circle.setAttribute('r', '6');
+circle.setAttribute('cx', x);
+circle.setAttribute('cy', y);
+radarWrapper.appendChild(circle);
+});
+}
+
+
+function createTableForTeam1() {
+const searchInput = document.getElementById('searchInput1');
+const searchButton = document.getElementById('searchButton1');
+const resultsTable = document.getElementById('resultsTable');
+
+
+const teamNames = new Set(); // Keep track of unique team names
+
+const teamNamesList = document.createElement('ul');
+teamNamesList.style.fontFamily = 'Arial, sans-serif'; 
+teamNamesList.style.listStyleType = 'none'; // Remove the bullet points
+teamNamesList.style.paddingLeft = '9px'; // Adjust the padding to move it further left
+resultsTable.appendChild(teamNamesList);
+
+
+let searchCounter = 0; // Initialize search counter
+
+searchButton.addEventListener('click', function () {
+const searchQuery = searchInput.value;
+const results = search(searchQuery);
+
+if (results) {
+const teamId = parseInt(results[0]); // Parse the team ID from the results
+
+const teamName = results[1] + ' (' + results[2] + ', ' + results[3] + ') - ' + results[11] + ' min';
+const color = colorClasses[searchCounter % colorClasses.length]; // Get the color class based on the search counter
+
+if (!teamNames.has(teamName)) {
+
+const teamNameItem = document.createElement('li');
+teamNameItem.textContent = teamName;
+teamNameItem.classList.add(color); // Apply the color class to the team name
+
+
+createTable(teamName, teamId - 1, color); // Pass the team ID and color to createTable
+searchCounter++;
+
+}
+} 
+
+});
+
+
+}
+
+
+
+createTableForTeam1();
+
+
+
+let colorIndex = 0; // Initialize color index
+
+searchButton1.addEventListener("click", function() {
+  const searchQuery = searchInput.value;
+  const searchedPlayer = search(searchQuery);
+
+  if (searchedPlayer.length > 0) {
+      const searchedPlayerData = searchedPlayer[0];
+      updateSimilarPlayers(searchedPlayerData);
+      colorIndex++;
+  }
+
+  searchInput.value = '';
+  updateMatchingNames();
+});
+
+function updateSimilarPlayers(playerData) {
+  const searchedPlayerIndex = parseInt(playerData[0]) - 1;
+  const similarPlayers = [];
+  
+  // Find the color class of the LAST player from their row in the table
+  const playerRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  let playerColor = '';
+  if (playerRows.length > 0) {
+      const lastPlayerRow = playerRows[playerRows.length - 1];
+      const lastPlayerCell = lastPlayerRow.querySelector('td:first-child');
+      // Get all color classes from the element
+      const classes = Array.from(lastPlayerCell.classList);
+      // Find the color class (starts with 'result-color-')
+      playerColor = classes.find(cls => cls.startsWith('result-color-'));
+  }
+  
+  for (let i = 0; i < dataArray.length; i++) {
+      if (i !== searchedPlayerIndex) {
+          const difference = calculateEuclideanDifference(playerData, dataArray[i]);
+          similarPlayers.push({ index: i, difference: difference });
+      }
+  }
+
+  similarPlayers.sort((a, b) => a.difference - b.difference);
+  const mostSimilarPlayers = similarPlayers.slice(0, 3);
+
+  const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+  similarPlayersContainer.innerHTML = ''; // Clear existing content
+
+  const similarPlayerTable = document.createElement("table");
+  similarPlayerTable.classList.add("similar-table");
+  
+  // Set width and alignment for the table
+  similarPlayerTable.style.width = "100%";
+  similarPlayerTable.style.textAlign = "center";
+
+  const headerRow = document.createElement("tr");
+  const headerCell = document.createElement("th");
+  headerCell.setAttribute("colspan", "5");
+  headerCell.innerHTML = `<span data-i18n="similar.to">Similar data to</span> ${playerData[1]}`;
+  // Use the last player's color class instead of the first one
+  headerCell.classList.add(playerColor || colorClasses[colorIndex % colorClasses.length]);
+  headerRow.appendChild(headerCell);
+  similarPlayerTable.appendChild(headerRow);
+
+  const similarPlayerRow = document.createElement("tr");
+
+  for (let i = 0; i < mostSimilarPlayers.length; i++) {
+      const playerIndex = mostSimilarPlayers[i].index;
+      const playerName = dataArray[playerIndex][1];
+      
+      const playerCell = document.createElement("td");
+      playerCell.textContent = playerName;
+      playerCell.style.fontSize = "10.8px";
+      playerCell.style.textDecoration = "underline";
+      playerCell.style.cursor = "pointer";
+
+      playerCell.addEventListener("click", function() {
+          const searchInput = document.getElementById('searchInput1');
+          const searchButton = document.getElementById('searchButton1');
+          searchInput.value = playerName;
+          searchButton.click();
+      });
+
+      similarPlayerRow.appendChild(playerCell);
+  }
+
+  similarPlayerTable.appendChild(similarPlayerRow);
+  similarPlayersContainer.appendChild(similarPlayerTable);
+}
+
+}) })
+.catch(error => {
+console.error('Error fetching or processing data:', error);
+});
+
 
 </script>
 	  
 <script>async function takeScreenshot() {
-  const body = document.querySelector('body');
-  const isDarkMode = body.classList.contains('dark-mode');
-  const backgroundColor = isDarkMode ? '#0F0F0E' : '#ffffff'; // Black for dark mode, white for light mode
+  const chartContainer = document.querySelector('.screenshotcontainer');
+  const isDarkMode = document.body.classList.contains('dark-mode');
   
-  try {
-    const element = document.querySelector('.screenshotcontainer'); // Capture the screenshotcontainer using the class name
-    if (!element) {
-      throw new Error('screenshotcontainer element not found');
+  html2canvas(chartContainer, {
+    scale: 2,
+    backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
+    allowTaint: true,
+    useCORS: true,
+    logging: false,
+    foreignObjectRendering: false,
+    imageTimeout: 0,
+    onclone: function(clonedDoc) {
+      // Hide similar players table
+      const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+        similarPlayersContainer.style.display = 'none';
+      }
+      
+      // Hide everything above results table
+      const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
+      const searchContainer = clonedDoc.querySelector('.search-container');
+      if (positionSwitcher) positionSwitcher.style.display = 'none';
+      if (searchContainer) searchContainer.style.display = 'none';
+      
+      // Fix SVG positioning
+      const radarSVG = clonedDoc.querySelector('.radar');
+      if (radarSVG) {
+        radarSVG.style.display = 'block';
+        radarSVG.style.margin = '0 auto';
+        
+        // Ensure transform is properly applied to SVG's inner group
+        const svgGroup = radarSVG.querySelector('g');
+        if (svgGroup) {
+          svgGroup.setAttribute('transform', 'translate(195.5, 195.5)');
+        }
+      }
     }
-
-    const canvas = await html2canvas(element, {
-        width: 468,
-        height: element.offsetHeight + 12, 
-        y: -10,
-        x: -10,
-        useCORS: true,
-        backgroundColor: backgroundColor, // Set the background color based on mode
-        scale: window.devicePixelRatio,
-        logging: false, // Disable logging for production
-        foreignObjectRendering: false,
-    });
-
-    canvas.toBlob(blob => {
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'screenshot.png';
-      link.click();
-    }, 'image/png');
-  } catch (error) {
-    console.error('Error in takeScreenshot:', error);
-    // Handle errors appropriately (e.g., display to user or log)
-  }
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'DataMB Screenshot.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
 }
-
-
 
   // Function to toggle dark mode
   function toggleDarkMode() {
@@ -1177,48 +1590,20 @@ function _0x3b15(_0x29b2d4,_0x20ed8f){const _0x5d7a42=_0x5d7a();return _0x3b15=f
     body.classList.add("dark-mode");
   }
 
-           
-
-
-
-</script>
-<div class="emptycontainer"></div>
-
-
-        <div class="finalcontainer">
-
-<center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
-crossorigin="anonymous"></script>
-<!-- radarplotsearch -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-7677714701428206"
-data-ad-slot="6673239737"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
-</div>
-
-
-<script>
-    // Function to scroll down a tiny bit
-    function scrollDown() {
-        window.scrollBy(0, 100); // Adjust the value (100) to change the scroll distance
-    }
-
-    // Function to scroll up a tiny bit
-    function scrollUp() {
-        window.scrollBy(0, -80); // Adjust the value (-80) to change the scroll distance
-    }
-
-    // Combine both actions with a small timer between them
-    window.onload = function() {
-        scrollDown();
-        setTimeout(scrollUp, 100); // Adjust the delay time (1000ms = 1 second)
-    };
-</script>
-
+</script></div></div>
+<center>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
+       crossorigin="anonymous"></script>
+  <!-- radarplotsearch -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7677714701428206"
+       data-ad-slot="6673239737"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script></center>
 </body>
 </html>
+
