@@ -1,0 +1,17 @@
+{
+    "search": {
+      "placeholder2": "Chercher un buteur..."
+    },
+    "radar": {
+      "a": "xA",
+      "b": "Passes Surf",
+      "c": "xG",
+      "d": "Buts",
+      "e": "% Aérien",
+      "f": "Passes Rec",
+      "g": "Actions Off"
+    },
+    "similar": {
+      "to": "Données similaires à"
+    }
+  } 
