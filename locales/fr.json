@@ -3,13 +3,13 @@
       "placeholder2": "Chercher un buteur..."
     },
     "radar": {
-      "a": "xA",
-      "b": "Passes Surf",
-      "c": "xG",
-      "d": "Buts",
-      "e": "% Aérien",
-      "f": "Passes Rec",
-      "g": "Actions Off"
+      "xa": "xA",
+      "touches": "Touches surf",
+      "aerial": "% Aérien",
+      "conversion": "% Conversion",
+      "npxg": "npxG",
+      "npg": "Buts HP",
+      "offduels": "Duels off"
     },
     "similar": {
       "to": "Données similaires à"
