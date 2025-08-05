@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Forvet adı girin..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "RCS topla buluşma",
+    "aerial": "Hava%",
+    "conversion": "Gole çevirme%",
+    "npxg": "npxG",
+    "npg": "NPG",
+    "offduels": "Hücum düelloları"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  }
+} 
