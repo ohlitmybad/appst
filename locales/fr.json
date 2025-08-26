@@ -1,0 +1,17 @@
+{
+    "search": {
+      "placeholder2": "Chercher un buteur..."
+    },
+    "radar": {
+      "xa": "xA",
+      "touches": "Touches surf",
+      "aerial": "% Aérien",
+      "conversion": "% Conversion",
+      "npxg": "npxG",
+      "npg": "Buts HP",
+      "offduels": "Duels off"
+    },
+    "similar": {
+      "to": "Données similaires à"
+    }
+  } 

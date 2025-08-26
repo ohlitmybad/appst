@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex">
+
+
+<script>
+(function() {
+      var width = window.innerWidth;
+      console.log('Window width:', width);  // Debug log
+
+      var initialScale = width / 470;
+      console.log('Initial scale:', initialScale);  // Debug log
+
+      var viewportMeta = document.querySelector('meta[name="viewport"]');
+      viewportMeta.setAttribute('content', 'width=device-width, initial-scale=' + initialScale + ', user-scalable=no');
+      console.log('Viewport meta updated with initial scale:', initialScale);  // Debug log
+      
+  })();
+</script>
+
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
+     crossorigin="anonymous"></script>
+	
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="/radarapp.css">
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PSBMXX80EF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PSBMXX80EF');
+</script>
+
+
+<body>
+  <div class="screenshotcontainer">
+    <div class="position-switcher-container">
+      <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>GK</span>
+      </a>
+      <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CB</span>
+      </a>
+      <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FB</span>
+      </a>
+      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CM</span>
+      </a>
+      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FW</span>
+      </a>
+      <span class="position-link active" style="user-select: none;">
+        <span>ST</span>
+    </span>
+    </div>
+
+    <div class="search-container">
+      <div class="search-controls">
+        <input type="text" id="searchInput1" class="search-bar" data-i18n="search.placeholder2" placeholder="Enter striker name..." />
+        <button id="searchButton1">+</button>
+      </div>
+      <div id="matchingNames"></div>
+    </div>
+
+    <div id="resultsTable"></div>
+    
+    <div class="radar-container" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+      <svg class="radar">
+        <g transform="translate(0,0)"><g class="axisWrapper">
+          <g class="radar_label">
+            <text class="label" data-type="xA" data-idx="0" data-i18n="radar.xa" transform="translate(-20.52 -173.04) rotate(-1.7)">xA</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="touches" data-idx="6" data-i18n="radar.touches" transform="matrix(0.57, -0.97, 0.97, 0.57, -174.1, -53.07) scale(0.885) rotate(4.5)">Touches in box</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="Aerial" data-idx="5" data-i18n="radar.aerial" transform="matrix(-0.43, -1.05, 1.05, -0.43, -160.87, 68.3) scale(0.885) rotate(5.87)">Aerial%</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="conversion" data-idx="4" data-i18n="radar.conversion" transform="translate(-121.84 146.23) rotate(24)">Conversion%</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="npxG" data-idx="3" data-i18n="radar.npxg" transform="translate(72.89 171.77) rotate(-30)">npxG</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="npg" data-idx="2" data-i18n="radar.npg" transform="translate(174.1 11.57) rotate(99.91)">NPG</text>
+        </g>
+        
+        <g class="radar_label">
+            <text class="label" data-type="offduels" data-idx="1" data-i18n="radar.offduels" transform="translate(104.9 -142.3) rotate(48.99)">Off duels</text>
+        </g>
+
+
+<circle class="blackCircle" r="165" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
+<circle class="gridCircle" r="165" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="139" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="104" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="70" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="35" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+
+
+<line x1="0" y1="0" x2="8.11" y2="164.74" stroke="#D3D3D3" stroke-width="1" transform="translate(-8.11, -164.74)"></line>
+<line x1="0" y1="0" x2="-123.52" y2="109.77" stroke="#D3D3D3" stroke-width="1" transform="translate(123.25, -109.77)"></line>
+<line x1="0" y1="0" x2="-162.88" y2="-28.1" stroke="#D3D3D3" stroke-width="1" transform="translate(163.09, 28.04)"></line>
+<line x1="0" y1="0" x2="-79.86" y2="-145.15" stroke="#D3D3D3" stroke-width="1" transform="translate(79.86, 144.53)"></line>
+<line x1="0" y1="0" x2="63.48" y2="-152.91" stroke="#D3D3D3" stroke-width="1" transform="translate(-63.48, 152.47)"></line>
+<line x1="0" y1="0" x2="158.9" y2="-45.8" stroke="#D3D3D3" stroke-width="1" transform="translate(-158.89, 45.63)"></line>
+<line x1="0" y1="0" x2="134.5" y2="95.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-134.51, -95.67)"></line>
+
+
+<g class="radarWrapper"></g>
+</g></g>
+      </svg>
+    </div>
+    
+    <div class="logo-screenshot-container">
+      <img src="https://datamb.football/logo.png" alt="Logo">
+      <div id="similarPlayersContainer"></div>
+      <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
+    
+    <div id="insertHere"></div>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <div class="toggle-icon"></div>
+
+<script src="appst.js"></script>
+	  
+<script src="/apphelpers.js"></script></div></div>
+<center>
+    <!-- radarplotsearch -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7677714701428206"
+       data-ad-slot="6673239737"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script></center>
+</body>
+</html>
+

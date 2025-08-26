@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Introduce nombre de delantero..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "Toques en área",
+    "aerial": "Aéreo%",
+    "conversion": "Conversión%",
+    "npxg": "npxG",
+    "npg": "NPG",
+    "offduels": "Duelos of"
+  },
+  "similar": {
+    "to": "Datos similares a"
+  }
+} 
