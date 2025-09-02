@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Forvet adı girin..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "RCS topla",
+    "aerial": "Hava%",
+    "conversion": "Çevirme%",
+    "npxg": "npxG",
+    "npg": "NPG",
+    "offduels": "Hücum düello"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  },
+  "header": {
+    "percentiles": "Yüzdelikler",
+    "clickforinfo": "Tam metrik adını görmek için başlığa tıklayın",
+    "percentilesvstop7leagues": "En İyi 7 Lig vs Yüzdelikler",
+    "expectedassists": "Beklenen asistler",
+    "touchesinbox": "Ceza sahasında topla temas",
+    "aerialduelswon": "Hava mücadeleleri kazanıldı %",
+    "conversionrate": "Çevirme oranı %",
+    "nonpenaltyexpectedgoals": "Penaltı olmayan beklenen goller",
+    "nonpenaltygoals": "Penaltı olmayan goller",
+    "offensiveduelswon": "Hücum mücadeleleri kazanıldı %",
+    "minutesplayed": "Oynanan dakikalar"
+  }
+} 
