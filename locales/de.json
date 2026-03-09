@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Name des Stürmers eingeben..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "Kontakte Strafraum",
+    "aerial": "Kopfball%",
+    "conversion": "Torquote%",
+    "npxg": "npxG",
+    "npg": "Tore o.E.",
+    "offduels": "Off. Duelle"
+  },
+  "similar": {
+    "to": "Ähnliche Daten wie"
+  },
+  "header": {
+    "percentiles": "Perzentile",
+    "clickforinfo": "Klicken Sie auf eine Überschrift für den vollständigen Metriknamen",
+    "percentilesvstop7leagues": "Perzentile vs Top-7-Ligen",
+    "expectedassists": "Erwartete Assists",
+    "touchesinbox": "Ballkontakte im Strafraum",
+    "aerialduelswon": "Kopfballduelle gewonnen %",
+    "conversionrate": "Torabschlussquote %",
+    "nonpenaltyexpectedgoals": "Erwartete Tore (ohne Elfmeter)",
+    "nonpenaltygoals": "Tore ohne Elfmeter",
+    "offensiveduelswon": "Offensive Duelle gewonnen %",
+    "minutesplayed": "Minuten gespielt"
+  }
+}
