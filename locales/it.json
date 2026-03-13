@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Inserisci nome dell'attaccante..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "Tocchi area",
+    "aerial": "Aerei%",
+    "conversion": "Conversione%",
+    "npxg": "npxG",
+    "npg": "NPG",
+    "offduels": "Duelli off."
+  },
+  "similar": {
+    "to": "Dati simili a"
+  },
+  "header": {
+    "percentiles": "Percentili",
+    "clickforinfo": "Clicca su un'intestazione per il nome completo della metrica",
+    "percentilesvstop7leagues": "Percentili vs Top 7 Leghe",
+    "expectedassists": "Assist attesi",
+    "touchesinbox": "Tocchi in area",
+    "aerialduelswon": "Duelli aerei vinti %",
+    "conversionrate": "Tasso di conversione %",
+    "nonpenaltyexpectedgoals": "Gol attesi (escl. rigori)",
+    "nonpenaltygoals": "Gol (escl. rigori)",
+    "offensiveduelswon": "Duelli offensivi vinti %",
+    "minutesplayed": "Minuti giocati"
+  }
+}

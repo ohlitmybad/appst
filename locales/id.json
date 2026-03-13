@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Masukkan nama penyerang..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "Sentuhan kotak",
+    "aerial": "Udara%",
+    "conversion": "Konversi%",
+    "npxg": "npxG",
+    "npg": "NPG",
+    "offduels": "Duel srgn"
+  },
+  "similar": {
+    "to": "Data serupa dengan"
+  },
+  "header": {
+    "percentiles": "Persentil",
+    "clickforinfo": "Klik header untuk nama metrik lengkap",
+    "percentilesvstop7leagues": "Persentil vs 7 Liga Teratas",
+    "expectedassists": "Asisten yang diharapkan",
+    "touchesinbox": "Sentuhan di kotak penalti",
+    "aerialduelswon": "Duel udara menang %",
+    "conversionrate": "Tingkat konversi %",
+    "nonpenaltyexpectedgoals": "Gol yang diharapkan (selain penalti)",
+    "nonpenaltygoals": "Gol (selain penalti)",
+    "offensiveduelswon": "Duel menyerang menang %",
+    "minutesplayed": "Menit bermain"
+  }
+}

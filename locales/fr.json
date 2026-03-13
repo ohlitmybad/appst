@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Chercher un buteur..."
+  },
+  "radar": {
+    "xa": "xA",
+    "touches": "Touches surf",
+    "aerial": "% Aérien",
+    "conversion": "% Conversion",
+    "npxg": "npxG",
+    "npg": "Buts HP",
+    "offduels": "Duels off"
+  },
+  "similar": {
+    "to": "Données similaires à"
+  },
+  "header": {
+    "percentiles": "Centiles",
+    "clickforinfo": "Cliquez sur un en-tête pour voir le nom complet de la métrique",
+    "percentilesvstop7leagues": "Centiles parmi 7 grands championnats",
+    "expectedassists": "Passes décisives attendues",
+    "touchesinbox": "Touches dans la surface",
+    "aerialduelswon": "Duels aériens gagnés %",
+    "conversionrate": "Taux de conversion %",
+    "nonpenaltyexpectedgoals": "Buts attendus sans penalty",
+    "nonpenaltygoals": "Buts sans penalty",
+    "offensiveduelswon": "Duels offensifs gagnés %",
+    "minutesplayed": "Minutes jouées"
+  }
+} 
